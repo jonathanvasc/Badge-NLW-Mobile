@@ -1,0 +1,88 @@
+/*CSS - Cascading style sheets (Folha de estilo em cascata)*/
+* {
+  margin: 0;
+}
+
+html,
+body {
+  --grey: hsl(240, 9%, 89%); /*Cria uma variavel e atribui a cor a ela*/
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: grid; /*Grid trabalha em 2 dimensões tanto no eixo horizontal, quanto no vertical, com isso eu consigo ir posicionando elementos*/
+
+  place-items: center;
+}
+main {
+  background: url(./images/bg.svg) no-repeat center/cover;
+  width: 100vw;
+  min-height: 812px;
+  height: 100vh;
+}
+
+.container {
+  max-width: 250px; /*Coloca a largura maxima do elemento.*/
+  margin: 0 auto;
+  text-align: center;
+  color: var(--grey);
+}
+
+.avatar {
+  width: 10rem;
+  margin: 11.5rem auto 0;
+  position: relative; /*coloca a tag avatar como referencia da logo*/
+}
+
+.avatar span {
+  position: absolute; /*Coloca o selo por cima da outra imagem*/
+  top: -15px;
+  z-index: 1; /*Vai trabalhar o posicionamento no eixo Z(Profundidade)*/
+}
+.avatar > img {
+  width: 10rem;
+  height: 11.5rem;
+  object-fit: cover; /*volta a proporção da foto*/
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  /*muda o formato da foto*/
+}
+.selo:hover {
+  transform: rotate(360deg);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-top: 24px;
+}
+
+#userGithub {
+  color: #c4c4cc;
+  text-decoration: none;
+  font-size: 12px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 6px;
+}
+
+p {
+  margin-top: 32px;
+}
+
+ul {
+  margin-top: 64px;
+  list-style: none; /*Tira o efeito de lista (as bolinhas)*/
+
+  padding: 0; /*Retira o espaçamento interno que tem nos itens)*/
+
+  display: flex; /*Faz com que os elementos fiquem um ao lado do outro no eixo vertical, ou seja no eixo X(eixo main).*/
+
+  gap: 8px; /*Abre um espaço entre os elementos da lista.*/
+
+  justify-content: center; /*Centraliza os elementos da lista.*/
+
+  /*Tanto GAP e JUSTIFY CONTENT  são usados somente quando display GRID ou FLEX*/
+}
