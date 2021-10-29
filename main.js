@@ -1,6 +1,6 @@
 const linksSocialMidia = {
   github: 'jonathanvasc',
-  instagram: 'jonathan.vascon',
+  instagram: 'mtb_muaythai',
   twitter: 'jonathan_vasc'
 }
 function changeSocialMidiaLinks() {
